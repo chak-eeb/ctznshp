@@ -1,11 +1,12 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import {View, Text} from 'react-native';
-import Home from './screens/Home';
+import {NavigationContainer} from '@react-navigation/native';
+import MyStack from './navigation/MyStack';
 const App = () => {
   return (
-    <View>
-      <Home />
-    </View>
+    <NavigationContainer>
+      <MyStack />
+    </NavigationContainer>
   );
 };
 

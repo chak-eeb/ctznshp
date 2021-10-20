@@ -2,20 +2,28 @@ import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-const Home = () => {
+const Home = ({navigation}) => {
+const toSignup = () =>{
+  navigation.navigate('Signup');
+}
+
+const toLogin = () =>{
+  navigation.navigate('Login')
+}
+
   return (
-    <LinearGradient colors={['#fad2e1', '#f28482']} style={styles.container}>
+    <LinearGradient colors={['#fbfff1', '#fbf7f1']} style={styles.container}>
       <Image
         source={require('../../../assets/images/ctznshp-logo.png')}
-        style={{width: '80%', height: 400}}
+        style={{width: '100%', height: 400}}
         resizeMode="contain"
       />
 
       <View style={styles.buttonsContainer}>
-        <TouchableOpacity style={styles.login}>
+         <TouchableOpacity style={styles.signup} onPress={toSignup}>
           <Text style={styles.text}>Signup</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.signup}>
+        <TouchableOpacity style={styles.login} onPress={toLogin}>
           <Text style={styles.text}>Login</Text>
         </TouchableOpacity>
       </View>
@@ -35,10 +43,12 @@ const styles = StyleSheet.create({
   },
   buttonsContainer: {
     padding: 15,
-    width: '85%',
+    marginBottom:20,
+    width: '95%',
     height: 170,
     justifyContent: 'space-between',
     alignItems: 'center',
+    
   },
   text: {
     marginVertical: 8,
@@ -46,19 +56,19 @@ const styles = StyleSheet.create({
     color: 'white',
     fontFamily: 'poppins',
   },
-  login: {
-    width: 200,
+  login: { 
+     width: "100%",
     paddingVertical: 8,
     backgroundColor: '#0077b6',
     alignItems: 'center',
-    borderRadius: 30,
+    borderRadius: 5,
   },
-  signup: {
-    width: 200,
+  signup: { 
+    width: '100%',
     paddingVertical: 8,
     backgroundColor: '#0077b6',
     alignItems: 'center',
-    borderRadius: 30,
+    borderRadius: 5,
   },
 });
 
