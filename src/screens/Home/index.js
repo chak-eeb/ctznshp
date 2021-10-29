@@ -20,11 +20,11 @@ const toLogin = () =>{
       />
 
       <View style={styles.buttonsContainer}>
-         <TouchableOpacity style={styles.signup} onPress={toSignup}>
-          <Text style={styles.text}>Signup</Text>
-        </TouchableOpacity>
         <TouchableOpacity style={styles.login} onPress={toLogin}>
           <Text style={styles.text}>Login</Text>
+        </TouchableOpacity>
+         <TouchableOpacity style={styles.signup} onPress={toSignup}>
+          <Text style={styles.text}>Signup</Text>
         </TouchableOpacity>
       </View>
     </LinearGradient>
@@ -52,21 +52,21 @@ const styles = StyleSheet.create({
   },
   text: {
     marginVertical: 8,
-    fontSize: 20,
-    color: 'white',
+    fontSize: 24,
+    color: '#1d4166',
     fontFamily: 'poppins',
   },
   login: { 
      width: "100%",
     paddingVertical: 8,
-    backgroundColor: '#0077b6',
+    backgroundColor: '#9bbaf0',
     alignItems: 'center',
     borderRadius: 5,
   },
   signup: { 
     width: '100%',
     paddingVertical: 8,
-    backgroundColor: '#0077b6',
+    backgroundColor: '#9bbaf0',
     alignItems: 'center',
     borderRadius: 5,
   },
